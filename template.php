@@ -224,3 +224,12 @@ function utlibraries_preprocess_block(&$variables, $hook) {
   //}
 }
 // */
+
+
+/**
+ * Function to give a php shortcut variable to the theme path.
+ */
+
+function utlibraries_preprocess_page(&$vars) {
+  $vars['path'] = base_path() . path_to_theme() .'/';
+}

@@ -50,7 +50,7 @@ body {
 }
 
 #header-mid {
-  @include gradient-bg(white, orange);
+  @include gradient-bg(#ffffff, #cc5500);
 }
 
 #logo { /* Wrapping link for logo */

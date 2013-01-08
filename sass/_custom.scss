@@ -7,6 +7,12 @@
 // curly brackets:
 //   @include mix-in-name;
 
+@mixin gradient-bg($color1, $color2) {
+  background-color: $color1;
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#{$color1}, endColorstr=#{$color2});
+  background-image: -moz-linear-gradient(center top, $color1, $color2);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($color1), to($color2));
+}
 
 // element-invisible as defined by http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
 @mixin element-invisible {

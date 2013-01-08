@@ -20,6 +20,7 @@ body {
 }
 
 #page {
+  padding-top: 20px;
 }
 
 /*
@@ -46,6 +47,10 @@ body {
  */
 
 #header {
+}
+
+#header-mid {
+  @include gradient-bg(#ffffff, #cc5500);
 }
 
 #logo { /* Wrapping link for logo */
@@ -82,6 +87,7 @@ body {
 #site-slogan { /* The slogan (or tagline) of a website */
   margin: 0;
   font-size: 1em;
+  background: image-url('slogan.png') no-repeat;
 }
 
 .region-header { /* Wrapper for any blocks placed in the header region */

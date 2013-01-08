@@ -228,6 +228,7 @@ function utlibraries_preprocess_block(&$variables, $hook) {
 
 /**
  * Function to give a php shortcut variable to the theme path.
+ * @param $vars
  */
 
 function utlibraries_preprocess_page(&$vars) {

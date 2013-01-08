@@ -13,3 +13,6 @@ Icon
 
 ### SASS Ignores - "Sassy CSS" http://sass-lang.com/
 *.sass-cache
+
+#Fire.app Ignores
+fire_app_log.txt

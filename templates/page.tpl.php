@@ -69,9 +69,6 @@
  * @see template_process()
  */
 ?>
-<pre>
-<?php print $path; ?>
-</pre>
 <div id="page">
 
   <header id="header" role="banner">

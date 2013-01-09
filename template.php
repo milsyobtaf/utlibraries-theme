@@ -231,6 +231,8 @@ function utlibraries_preprocess_block(&$variables, $hook) {
  * @param $vars
  */
 
-function utlibraries_preprocess_page(&$vars) {
-  $vars['path'] = base_path() . path_to_theme() .'/';
+function utlibraries_preprocess_page(&$variables){
+  $themepath = (base_path() . path_to_theme() .'/');
+  $variables['path'] = $themepath;
 }
+

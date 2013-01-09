@@ -69,12 +69,14 @@
  * @see template_process()
  */
 ?>
-
+<pre>
+<?php print $path; ?>
+</pre>
 <div id="page">
 
   <header id="header" role="banner">
     <span id="header-top">
-      <a href="http://www.utexas.edu" title="University of Texas at Austin Home Page" class="universitylogo"><img src="<?php $path ?>images/tower-header.jpg" />&nbsp;</a>
+      <a href="http://www.utexas.edu" title="University of Texas at Austin Home Page" class="universitylogo"><img src="<?php print $path ?>images/tower-header.jpg" /></a>
       <?php if ($secondary_menu): ?>
       <nav id="secondary-menu" role="navigation">
         <?php print theme('links__system_secondary_menu', array(
@@ -97,9 +99,21 @@
         <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
       </span>
     <?php endif; ?>
-      <span id="site-slogan"><img src="<?php $path; ?>images/slogan.png" />&nbsp;</span>
+      <span id="site-slogan"><img src="<?php print $path ?>images/slogan.png" /></span>
+
       <span id="site-search">
-        Search Box Here
+        <form action="http://www.lib.utexas.edu/phpsearchbox.html" method="post" style="display:inline;">
+        <label for="query">SEARCH:</label>
+        <label for="engine" id="searcharea" class="element-invisible">choose an area to search</label> 
+        <select name="engine" size="1" id="engine" title="choose an area to search">
+          <option selected="selected" value="UTLOL">Library Web Site</option>
+          <option value="iiikw">Library Catalog</option>
+          <option value="HDI">How Do I...?</option>
+          <option value="google">Web</option>
+        </select>
+        <input type="text" name="query" id="query" style="width: 100px;">
+        <input type="submit" id="GO" value="GO">
+      </form>
       </span>
 
     <?php print render($page['header']); ?>

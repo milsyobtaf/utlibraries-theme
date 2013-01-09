@@ -87,7 +87,22 @@ body {
 #site-slogan { /* The slogan (or tagline) of a website */
   margin: 0;
   font-size: 1em;
-  background: image-url('slogan.png') no-repeat;
+}
+
+#site-search {
+  float: right;
+}
+
+#site-search label {
+  display: inline;
+}
+
+#site-search input[type=text] {
+  @include text-field;
+}
+
+#site-search input[type=input] {
+  @include button;
 }
 
 .region-header { /* Wrapper for any blocks placed in the header region */

@@ -76,6 +76,8 @@ li a.active {
 /* line 84, ../sass/navigation.scss */
 #secondary-menu {
   float: right;
+  position: relative;
+  top: 1.5em;
 }
 
 /*

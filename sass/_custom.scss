@@ -32,20 +32,18 @@
   border-radius: $radius;
 }
 
-@mixin button($color: $red, $text_color: $white) {
+@mixin button($color: $red, $text_color: $white, $padding: .5em 2em .55em) {
   display: inline-block;
   outline: none;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
   font: 14px/100% Arial, Helvetica, sans-serif;
-  padding: .5em 2em .55em;
+  padding: $padding;
   text-shadow: 0 1px 1px rgba(0,0,0,.3);
-  @include rounded();
+  @include rounded(2px);
   @include box-shadow(0, 1px, 2px, rgba(0, 0, 0, 0.2));
- 
   color: $text_color !important;
-  font-weight: bold;
   border: solid 1px darken($color, 18%);
   background: $color;
   @include gradient-bg(saturate($color, 15%), darken($color, 15%));

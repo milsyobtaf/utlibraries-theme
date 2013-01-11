@@ -72,8 +72,9 @@
 <div id="page">
 
   <header id="header" role="banner">
-    <span id="header-top">
-      <a href="http://www.utexas.edu" title="University of Texas at Austin Home Page" class="universitylogo"><img src="<?php print $path ?>images/tower-header.jpg" /></a>
+
+    <div id="header-top">
+      <span><a href="http://www.utexas.edu" title="University of Texas at Austin Home Page" class="universitylogo"><img src="<?php print $path ?>images/tower-header.jpg" /></a></span>
       <?php if ($secondary_menu): ?>
       <nav id="secondary-menu" role="navigation">
         <?php print theme('links__system_secondary_menu', array(
@@ -89,8 +90,8 @@
         )); ?>
       </nav>
     <?php endif; ?>
-    </span>
-    <span id="header-mid">
+    </div>
+    <div id="header-mid">
     <?php if ($logo): ?>
       <span id="site-logo">
         <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
@@ -112,7 +113,8 @@
         <input type="submit" id="GO" value="GO">
       </form>
       </span>
-
+    </div>
+    
     <?php print render($page['header']); ?>
 
   </header>
@@ -185,3 +187,44 @@
 </div><!-- /#page -->
 
 <?php print render($page['bottom']); ?>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+  var pageTracker = _gat._getTracker("UA-3780897-3");
+  
+  // begin additional code to avoid cookie conflicts
+  pageTracker._setDomainName(".utexas.edu");
+  pageTracker._setAllowHash(false);
+  // end additional code to avoid cookie conflicts
+
+
+  pageTracker._trackPageview();
+} catch(err) {}
+
+</script>
+
+<!-- call Web Central tracking script -->
+<script type="text/javascript">
+var utJsHost = (("https:" == document.location.protocol) ? "https://www." : "http://www.");
+document.write(unescape("%3Cscript src='" + utJsHost + "utexas.edu/common/js/ga_subdomain.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<!-- include all subdomains -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3780897-21']);
+  _gaq.push(['_setDomainName', 'lib.utexas.edu']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>

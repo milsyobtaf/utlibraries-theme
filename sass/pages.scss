@@ -47,20 +47,15 @@ body {
  */
 
 #header {
+  line-height: 0;
+}
+
+#header-top {
 }
 
 #header-mid {
-  @include gradient-bg(#ffffff, #cc5500);
-}
-
-#logo { /* Wrapping link for logo */
-  float: left;
-  margin: 0;
-  padding: 0;
-
-  img {
-    vertical-align: bottom;
-  }
+  @include gradient-bg(lighten(#cc5500, 40%), #cc5500);
+  @include border-top-right-radius(5px);
 }
 
 #name-and-slogan { /* Wrapper for website name and slogan */
@@ -91,20 +86,21 @@ body {
 
 #site-search {
   float: right;
+  padding: .2em 1em;
+  vertical-align: bottom;
+  label {
+    display: inline;
+    color: white;
+  }
+  
+  input[type=text] {
+    @include text-field;
+  }
+  
+  input[type=submit] {
+    @include button(lighten($grey, 50%),$white, .15em .4em);
+  }
 }
-
-#site-search label {
-  display: inline;
-}
-
-#site-search input[type=text] {
-  @include text-field;
-}
-
-#site-search input[type=input] {
-  @include button;
-}
-
 .region-header { /* Wrapper for any blocks placed in the header region */
   clear: both; /* Clear the logo */
 }

@@ -88,6 +88,132 @@ li a.active {
 }
 
 /*
+ * Footer navigation
+ */
+
+#footer {
+  width: 100%;
+  font-size: .8em;
+  line-height: 1.4em;
+}
+#footer {
+  .block, ul {
+    margin: 0;
+    padding: 0;
+  }
+}
+@include breakpoint(papa-bear){
+  #footer {
+    @include zen-grid-container;
+    $zen-column-count: 20;
+    $zen-gutter-width: 1.5em;
+  }
+}
+@include breakpoint(mama-bear){
+  #footer {
+    text-align: right;
+    @include zen-grid-container;
+    $zen-column-count: 12;
+    $zen-gutter-width: 1.5em;
+
+    div.general-purpose-links-footer {
+      @include zen-grid-item(6,6);
+    }
+    div.user-menu-footer {
+      @include zen-clear();
+      @include zen-grid-item(6, 6);
+   }
+    div.social-media-links-footer {
+      @include zen-clear();
+      @include zen-grid-item(3, 2, right);
+    }
+    div.ut-direct-footer {
+      @include zen-grid-item(2, 11);
+      margin-top: -4em;
+    }
+  }
+}
+@include breakpoint(baby-bear){
+  #footer {
+    text-align: center;
+    @include zen-grid-container;
+    $zen-column-count: 1;
+    $zen-gutter-width: 1.5em;
+
+    div.general-purpose-links-footer {
+      @include zen-clear();
+      @include zen-grid-item(1,1);
+    }
+    div.user-menu-footer {
+      @include zen-clear();
+      @include zen-grid-item(1,1);
+    }
+    div.social-media-links-footer {
+      @include zen-clear();
+      @include zen-grid-item(1, 1);
+    }
+    div.ut-direct-footer {
+      @include zen-clear();
+      @include zen-grid-item(1, 1);
+      margin-top: inherit;
+    }
+  }
+}
+
+/*
+div.general-purpose-links-footer
+div.social-media-links-footer
+
+*/
+
+#footer ul#footer-social-icons li,
+#footer ul#footer-links li,
+#footer ul.menu li {
+  display: inline;
+  list-style-type: none;
+}
+div.ut-direct-footer,
+div.general-purpose-links-footer,
+div.social-media-links-footer,
+div.user-menu-footer {
+/*   float: right; */
+}
+#footer div.general-purpose-links-footer {
+  @include breakpoint(baby-bear) {
+    display: block;
+/*     float: none; */
+  }
+}
+#footer div#footer-utdirectlogo {
+  span {
+      display: block;
+      font-size: .8em;
+  }
+}
+#footer ul#footer-links {
+/*
+  li:before {
+    content: "|";
+  @include breakpoint(baby-bear) {
+    content: none;
+  }
+  }
+  li:first-child:before {
+    content: none;
+  }
+*/
+  li a {
+    margin: 0 .3em;
+  }
+}
+#footer ul.menu {
+    li a {
+    margin: 0 .3em;
+  }
+}
+
+
+/*
  * Menu blocks
  */
 

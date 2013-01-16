@@ -7,6 +7,24 @@
 // curly brackets:
 //   @include mix-in-name;
 
+@mixin breakpoint($point) {
+  @if $point == papa-bear {
+    @media (max-width: 100em) {
+      @content; 
+    }
+  }
+  @else if $point == mama-bear {
+    @media (max-width: 75em) {
+      @content; 
+    }
+  }
+  @else if $point == baby-bear {
+    @media (max-width: 45em) {
+      @content; 
+    }
+  }
+}
+
 @mixin gradient-bg($color1, $color2) {
   background-color: $color1;
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#{$color1}, endColorstr=#{$color2});

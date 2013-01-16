@@ -38,12 +38,23 @@ li a.active {
 #navigation {
   /* overflow: hidden; */
   /* Sometimes you want to prevent overlapping with main div. */
+  height: inherit;
+  background: #999999;
+  border-top: 1px solid white;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid black;
 }
-/* line 50, ../sass/navigation.scss */
+/* line 56, ../sass/navigation.scss */
+#navigation #main-menu {
+  position: relative;
+  left: 85px;
+}
+/* line 61, ../sass/navigation.scss */
 #navigation .block {
   margin-bottom: 0;
 }
-/* line 55, ../sass/navigation.scss */
+/* line 66, ../sass/navigation.scss */
 #navigation .block-menu .block-title,
 #navigation .block-menu-block .block-title {
   position: absolute !important;
@@ -52,7 +63,7 @@ li a.active {
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
 }
-/* line 60, ../sass/navigation.scss */
+/* line 71, ../sass/navigation.scss */
 #navigation ul.links,
 #navigation ul.menu {
   /* Menu block links */
@@ -60,7 +71,7 @@ li a.active {
   padding: 0;
   text-align: left;
 }
-/* line 65, ../sass/navigation.scss */
+/* line 76, ../sass/navigation.scss */
 #navigation ul.links li,
 #navigation ul.menu li {
   /* A simple method to get navigation links to appear in one line. */
@@ -73,7 +84,7 @@ li a.active {
 /*
  * Main menu and Secondary menu links
  */
-/* line 84, ../sass/navigation.scss */
+/* line 95, ../sass/navigation.scss */
 #secondary-menu {
   float: right;
   position: relative;
@@ -83,32 +94,21 @@ li a.active {
 /*
  * Footer navigation
  */
-/* line 94, ../sass/navigation.scss */
+/* line 105, ../sass/navigation.scss */
 #footer {
   width: 100%;
   font-size: .8em;
   line-height: 1.4em;
 }
 
-/* line 100, ../sass/navigation.scss */
+/* line 111, ../sass/navigation.scss */
 #footer .block, #footer ul {
   margin: 0;
   padding: 0;
 }
 
 @media (max-width: 100em) {
-  /* line 52, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
-  #footer:before, #footer:after {
-    content: "";
-    display: table;
-  }
-  /* line 56, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
-  #footer:after {
-    clear: both;
-  }
-}
-@media (max-width: 75em) {
-  /* line 113, ../sass/navigation.scss */
+  /* line 117, ../sass/navigation.scss */
   #footer {
     text-align: right;
   }
@@ -121,7 +121,81 @@ li a.active {
   #footer:after {
     clear: both;
   }
-  /* line 119, ../sass/navigation.scss */
+  /* line 123, ../sass/navigation.scss */
+  #footer div.general-purpose-links-footer {
+    float: left;
+    width: 50%;
+    margin-left: 40%;
+    margin-right: -90%;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+  }
+  /* line 126, ../sass/navigation.scss */
+  #footer div.user-menu-footer {
+    clear: left;
+    float: left;
+    width: 30%;
+    margin-left: 60%;
+    margin-right: -90%;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+  }
+  /* line 130, ../sass/navigation.scss */
+  #footer div.social-media-links-footer {
+    clear: left;
+    float: right;
+    width: 20%;
+    margin-right: 5%;
+    margin-left: -25%;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+  }
+  /* line 134, ../sass/navigation.scss */
+  #footer div.ut-direct-footer {
+    float: left;
+    width: 10%;
+    margin-left: 90%;
+    margin-right: -100%;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    margin-top: -4em;
+  }
+}
+@media (max-width: 75em) {
+  /* line 141, ../sass/navigation.scss */
+  #footer {
+    text-align: right;
+  }
+  /* line 52, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+  #footer:before, #footer:after {
+    content: "";
+    display: table;
+  }
+  /* line 56, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+  #footer:after {
+    clear: both;
+  }
+  /* line 147, ../sass/navigation.scss */
   #footer div.general-purpose-links-footer {
     float: left;
     width: 50%;
@@ -135,7 +209,7 @@ li a.active {
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 122, ../sass/navigation.scss */
+  /* line 150, ../sass/navigation.scss */
   #footer div.user-menu-footer {
     clear: left;
     float: left;
@@ -150,7 +224,7 @@ li a.active {
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 126, ../sass/navigation.scss */
+  /* line 154, ../sass/navigation.scss */
   #footer div.social-media-links-footer {
     clear: left;
     float: right;
@@ -165,7 +239,7 @@ li a.active {
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 130, ../sass/navigation.scss */
+  /* line 158, ../sass/navigation.scss */
   #footer div.ut-direct-footer {
     float: left;
     width: 16.66667%;
@@ -182,7 +256,7 @@ li a.active {
   }
 }
 @media (max-width: 45em) {
-  /* line 137, ../sass/navigation.scss */
+  /* line 165, ../sass/navigation.scss */
   #footer {
     text-align: center;
   }
@@ -195,7 +269,7 @@ li a.active {
   #footer:after {
     clear: both;
   }
-  /* line 143, ../sass/navigation.scss */
+  /* line 171, ../sass/navigation.scss */
   #footer div.general-purpose-links-footer {
     clear: left;
     float: left;
@@ -210,7 +284,7 @@ li a.active {
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 147, ../sass/navigation.scss */
+  /* line 175, ../sass/navigation.scss */
   #footer div.user-menu-footer {
     clear: left;
     float: left;
@@ -225,7 +299,7 @@ li a.active {
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 151, ../sass/navigation.scss */
+  /* line 179, ../sass/navigation.scss */
   #footer div.social-media-links-footer {
     clear: left;
     float: left;
@@ -240,7 +314,7 @@ li a.active {
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 155, ../sass/navigation.scss */
+  /* line 183, ../sass/navigation.scss */
   #footer div.ut-direct-footer {
     clear: left;
     float: left;
@@ -262,7 +336,7 @@ div.general-purpose-links-footer
 div.social-media-links-footer
 
 */
-/* line 171, ../sass/navigation.scss */
+/* line 199, ../sass/navigation.scss */
 #footer ul#footer-social-icons li,
 #footer ul#footer-links li,
 #footer ul.menu li {
@@ -270,7 +344,7 @@ div.social-media-links-footer
   list-style-type: none;
 }
 
-/* line 178, ../sass/navigation.scss */
+/* line 206, ../sass/navigation.scss */
 div.ut-direct-footer,
 div.general-purpose-links-footer,
 div.social-media-links-footer,
@@ -279,20 +353,20 @@ div.user-menu-footer {
 }
 
 @media (max-width: 45em) {
-  /* line 181, ../sass/navigation.scss */
+  /* line 209, ../sass/navigation.scss */
   #footer div.general-purpose-links-footer {
     display: block;
     /*     float: none; */
   }
 }
 
-/* line 188, ../sass/navigation.scss */
+/* line 216, ../sass/navigation.scss */
 #footer div#footer-utdirectlogo span {
   display: block;
   font-size: .8em;
 }
 
-/* line 193, ../sass/navigation.scss */
+/* line 221, ../sass/navigation.scss */
 #footer ul#footer-links {
   /*
     li:before {
@@ -306,12 +380,12 @@ div.user-menu-footer {
     }
   */
 }
-/* line 205, ../sass/navigation.scss */
+/* line 233, ../sass/navigation.scss */
 #footer ul#footer-links li a {
   margin: 0 0.3em;
 }
 
-/* line 210, ../sass/navigation.scss */
+/* line 238, ../sass/navigation.scss */
 #footer ul.menu li a {
   margin: 0 0.3em;
 }

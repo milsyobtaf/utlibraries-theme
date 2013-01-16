@@ -46,7 +46,18 @@ li a.active {
 
 #navigation {
   /* overflow: hidden; */ /* Sometimes you want to prevent overlapping with main div. */
+  height: inherit;
+  background: #999999;
+  border-top: 1px solid #ffffff;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid #000000;  
 
+  #main-menu {
+    position: relative;
+    left: 85px;
+  }
+  
   .block {
     margin-bottom: 0;
   }
@@ -104,9 +115,26 @@ li a.active {
 }
 @include breakpoint(papa-bear){
   #footer {
+    text-align: right;
     @include zen-grid-container;
     $zen-column-count: 20;
     $zen-gutter-width: 1.5em;
+    
+    div.general-purpose-links-footer {
+      @include zen-grid-item(10, 9);
+    }
+    div.user-menu-footer {
+      @include zen-clear();
+      @include zen-grid-item(6, 13);
+   }
+    div.social-media-links-footer {
+      @include zen-clear();
+      @include zen-grid-item(4, 2, right);
+    }
+    div.ut-direct-footer {
+      @include zen-grid-item(2, 19);
+      margin-top: -4em;
+    }
   }
 }
 @include breakpoint(mama-bear){
@@ -117,7 +145,7 @@ li a.active {
     $zen-gutter-width: 1.5em;
 
     div.general-purpose-links-footer {
-      @include zen-grid-item(6,6);
+      @include zen-grid-item(6, 6);
     }
     div.user-menu-footer {
       @include zen-clear();

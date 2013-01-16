@@ -75,21 +75,12 @@
 
     <div id="header-top">
       <span><a href="http://www.utexas.edu" title="University of Texas at Austin Home Page" class="universitylogo"><img src="<?php print $path ?>images/tower-header.jpg" /></a></span>
-      <?php if ($secondary_menu): ?>
       <nav id="secondary-menu" role="navigation">
-        <?php print theme('links__system_secondary_menu', array(
-          'links' => $secondary_menu,
-          'attributes' => array(
-            'class' => array('links', 'inline', 'clearfix'),
-          ),
-          'heading' => array(
-            'text' => $secondary_menu_heading,
-            'level' => 'h2',
-            'class' => array('element-invisible'),
-          ),
-        )); ?>
+        <?php
+          $secondary_menu = menu_navigation_links('menu-secondary-menu');
+          print theme('links__menu_secondary_menu', array('links' => $secondary_menu));
+        ?>
       </nav>
-    <?php endif; ?>
     </div>
     <div id="header-mid">
     <?php if ($logo): ?>
@@ -114,6 +105,12 @@
       </form>
       </span>
     </div>
+    <nav id="main-menu" role="navigation">
+      <?php
+        $block = module_invoke('menu_block', 'block_view', '1');
+        print render($block['content']);
+      ?>
+    </nav>
     
     <?php print render($page['header']); ?>
 
@@ -139,33 +136,6 @@
       <?php print render($page['content']); ?>
       <?php print $feed_icons; ?>
     </div><!-- /#content -->
-
-    <div id="navigation">
-
-      <?php if ($main_menu): ?>
-        <nav id="main-menu" role="navigation">
-          <?php
-          // This code snippet is hard to modify. We recommend turning off the
-          // "Main menu" on your sub-theme's settings form, deleting this PHP
-          // code block, and, instead, using the "Menu block" module.
-          // @see http://drupal.org/project/menu_block
-          print theme('links__system_main_menu', array(
-            'links' => $main_menu,
-            'attributes' => array(
-              'class' => array('links', 'inline', 'clearfix'),
-            ),
-            'heading' => array(
-              'text' => t('Main menu'),
-              'level' => 'h2',
-              'class' => array('element-invisible'),
-            ),
-          )); ?>
-        </nav>
-      <?php endif; ?>
-
-      <?php print render($page['navigation']); ?>
-
-    </div><!-- /#navigation -->
 
     <?php
       // Render the sidebars to see if there's anything in them.

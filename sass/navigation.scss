@@ -44,9 +44,9 @@ li a.active {
  * Navigation bar
  */
 
-#navigation {
-  overflow: hidden;  /* Sometimes you want to prevent overlapping with main div.*/
-  height: inherit;
+div.menu-name-main-menu {
+/*   overflow: hidden; */  /* Sometimes you want to prevent overlapping with main div.*/
+  line-height: 1em;
   background: #999999;
   border-top: 1px solid #ffffff;
   border-right: none;
@@ -54,8 +54,6 @@ li a.active {
   border-bottom: 1px solid #000000;  
 
   #main-menu {
-    position: relative;
-    left: 85px;
   }
   
   .block {
@@ -67,17 +65,23 @@ li a.active {
     @include element-invisible();
   }
 
+  ul {
+    margin: .5em 0;
+    height: 1em;
+  }
   ul.links, /* Main menu and secondary menu links */
   ul.menu { /* Menu block links */
-    margin: 0;
     padding: 0;
     text-align: left;
+    position: relative;
+    left: 85px;
 
     li { /* A simple method to get navigation links to appear in one line. */
       float: left;
       padding: 0 10px 0 0;
       list-style-type: none;
       list-style-image: none;
+      display: block;
     }
   }
 }
@@ -95,7 +99,9 @@ li a.active {
 #secondary-menu {
   float: right;
   position: relative;
-  top: 1.5em;
+  ul li {
+    display: inline;
+  }
 }
 
 /*

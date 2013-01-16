@@ -48,7 +48,6 @@ body {
 
 #header {
   line-height: 0;
-  padding: 0 none;
 }
 
 #header-top {
@@ -57,10 +56,7 @@ body {
 #header-mid {
   @include gradient-bg(lighten(#cc5500, 40%), #cc5500);
   @include border-top-right-radius(5px);
-}
-
-#name-and-slogan { /* Wrapper for website name and slogan */
-  float: left;
+  clear: both;
 }
 
 #site-name { /* The name of the website */

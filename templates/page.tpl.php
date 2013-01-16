@@ -82,6 +82,7 @@
         ?>
       </nav>
     </div>
+    
     <div id="header-mid">
     <?php if ($logo): ?>
       <span id="site-logo">
@@ -105,16 +106,19 @@
       </form>
       </span>
     </div>
-    <nav id="main-menu" role="navigation">
-      <?php
-        $block = module_invoke('menu_block', 'block_view', '1');
-        print render($block['content']);
-      ?>
-    </nav>
+    
+    <div id="header-bottom">
+      <nav id="main-menu" role="navigation">
+        <?php
+          $block = module_invoke('menu_block', 'block_view', '1');
+          print render($block['content']);
+        ?>
+      </nav>
+    </div>
     
     <?php print render($page['header']); ?>
 
-  </header>
+  </header><!-- /#header -->
 
   <div id="main">
 

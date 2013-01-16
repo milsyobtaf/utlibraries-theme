@@ -98,7 +98,10 @@ div.menu-name-main-menu {
 
 #secondary-menu {
   float: right;
-  position: relative;
+  
+  ul {
+    margin: 1.5em 0 0;
+  }  
   ul li {
     display: inline;
   }

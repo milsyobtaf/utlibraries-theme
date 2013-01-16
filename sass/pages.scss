@@ -59,6 +59,16 @@ body {
   clear: both;
 }
 
+#header-breadcrumb {
+  background: #cccccc;
+  border-top: 2px solid #ffffff;
+  line-height: 2em;
+  
+  nav {
+    padding: 0 1em;
+  }
+}
+
 #site-name { /* The name of the website */
   margin: 0;
   font-size: 2em;
